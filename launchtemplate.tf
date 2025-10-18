@@ -3,7 +3,29 @@ resource "aws_launch_template" "ecomm-launch-temp-fe" {
   image_id      = data.aws_ami.amazon-linux-2023.image_id
   instance_type = "t2.micro"
   key_name      = "sing_01"
-  user_data     = file("frontend.sh")
+  user_data = base64encode(templatefile("${path.module}/scripts/frontend.sh", {
+  db_endpoint = aws_db_instance.ecomm-db-inst.endpoint
+}))
+
+
+  # user_data     = base64encode(file("./scripts/frontend.sh"))
+
+  #   <<EOF
+  # #!/bin/bash
+  # sudo dnf update -y
+  # sudo dnf install -y httpd
+  # sudo systemctl start httpd
+  # sudo systemctl enable httpd
+  # mkdir project
+  # sudo aws s3 cp s3://val-01 /home/ec2-user/project --recursive
+  # cp -r /home/ec2-user/project/* /var/www/html/
+  #   EOF
+
+  #  file("./scripts/frontend.sh")
+
+  iam_instance_profile {
+    arn = aws_iam_instance_profile.ecomm-instance-profile.arn
+  }
 
   network_interfaces {
     security_groups             = [aws_security_group.ecomm-sec-fe.id]

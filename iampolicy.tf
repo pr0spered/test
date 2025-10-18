@@ -58,6 +58,13 @@ resource "aws_iam_policy" "ecomm-iam-policy" {
           "ec2messages:SendReply"
         ],
         "Resource" : "*"
+      },
+      {
+        "Effect" : "Allow",
+        "Action" : [
+          "rds:DescribeDBInstances"
+        ],
+        "Resource" : "*"
       }
     ]
   })
