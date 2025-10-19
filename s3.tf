@@ -1,8 +1,7 @@
-# S3 Bucket to store frontend and backend code
-resource "aws_s3_bucket" "ecomm-bucket" {
-  bucket = "val-01"
+# # S3 Bucket to store frontend and backend code
+# resource "aws_s3_bucket" "ecomm-bucket" {
 
-  tags = {
-    Name = "ecomm-bucket"
-  }
-}
+#   tags = {
+#     Name = "ecomm-bucket"
+#   }
+# }

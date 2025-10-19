@@ -4,7 +4,7 @@
 dnf update -y
 dnf install -y httpd awscli php php-mysqlnd php-pdo
 
-sleep 60
+sleep 20
 
 systemctl enable httpd
 systemctl start httpd
@@ -24,43 +24,55 @@ chmod -R 755 /var/www/html
 
 # DB_HOST=$(aws rds describe-db-instances --query "DBInstances[?DBInstanceIdentifier=='ecomm-db-inst'].Endpoint.Address" --output text)
 
-cd /var/www/html/database
 
-echo "<?php
 
-class DBController
-{
-    // Database Connection Properties
-    protected \$host = "${db_endpoint}";
-    protected \$user = "admin";
-    protected \$password = "12345678";
-    protected \$database = "shopee";
+# cd /var/www/html/database
 
-    // connection property
-    public \$con = null;
 
-    // call constructor
-    public function __construct()
-    {
-        \$this->con = mysqli_connect(\$this->host, \$this->user, \$this->password, \$this->database);
-        if (\$this->con->connect_error){
-            echo "Fail " . \$this->con->connect_error;
-        }
-    }
+sed -i "s|<host>|${db_endpoint}|" /var/www/html/database/DBController.php
 
-    public function __destruct()
-    {
-        \$this->closeConnection();
-    }
 
-    // for mysqli closing connection
-    protected function closeConnection(){
-        if (\$this->con != null ){
-            \$this->con->close();
-            \$this->con = null;
-        }
-    }
-}" > DBController.php
+
+
+# echo "<?php
+
+# class DBController
+# {
+#     // Database Connection Properties
+#     protected \$host = "${db_endpoint}";
+#     protected \$user = "admin";
+#     protected \$password = "12345678";
+#     protected \$database = "shopee";
+
+#     // connection property
+#     public \$con = null;
+
+#     // call constructor
+#     public function __construct()
+#     {
+#         \$this->con = mysqli_connect(\$this->host, \$this->user, \$this->password, \$this->database);
+#         if (\$this->con->connect_error){
+#             echo "Fail " . \$this->con->connect_error;
+#         }
+#     }
+
+#     public function __destruct()
+#     {
+#         \$this->closeConnection();
+#     }
+
+#     // for mysqli closing connection
+#     protected function closeConnection(){
+#         if (\$this->con != null ){
+#             \$this->con->close();
+#             \$this->con = null;
+#         }
+#     }
+# }" > DBController.php
+
+
+
+
 
 
 

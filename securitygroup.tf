@@ -71,7 +71,7 @@ resource "aws_security_group" "ecomm-sec-bh" {
 
 resource "aws_vpc_security_group_ingress_rule" "ecomm-ssh-bh" {
   security_group_id = aws_security_group.ecomm-sec-bh.id
-  cidr_ipv4         = "0.0.0.0/0"
+  cidr_ipv4         = "${chomp(data.http.my_ip.response_body)}/32"
   ip_protocol       = "tcp"
   from_port         = 22
   to_port           = 22
@@ -131,9 +131,17 @@ resource "aws_security_group" "ecomm-sec-db" {
   }
 }
 
-resource "aws_vpc_security_group_ingress_rule" "ecomm-mysql-db" {
+resource "aws_vpc_security_group_ingress_rule" "ecomm-mysql-db-1" {
   security_group_id            = aws_security_group.ecomm-sec-db.id
-  referenced_security_group_id = aws_security_group.ecomm-sec-be.id
+  referenced_security_group_id = aws_security_group.ecomm-sec-fe.id
+  ip_protocol                  = "tcp"
+  from_port                    = 3306
+  to_port                      = 3306
+}
+
+resource "aws_vpc_security_group_ingress_rule" "ecomm-mysql-db-2" {
+  security_group_id            = aws_security_group.ecomm-sec-db.id
+  referenced_security_group_id = aws_security_group.ecomm-sec-bh.id
   ip_protocol                  = "tcp"
   from_port                    = 3306
   to_port                      = 3306

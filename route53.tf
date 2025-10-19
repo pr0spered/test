@@ -4,7 +4,7 @@ data "aws_route53_zone" "ecomm-zone" {
 }
 
 
-resource "aws_route53_record" "name" {
+resource "aws_route53_record" "ecomm-record" {
   zone_id = data.aws_route53_zone.ecomm-zone.zone_id
   name    = "www.strawb3rry.club"
   type    = "A"

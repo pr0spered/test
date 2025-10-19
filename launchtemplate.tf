@@ -4,8 +4,9 @@ resource "aws_launch_template" "ecomm-launch-temp-fe" {
   instance_type = "t2.micro"
   key_name      = "sing_01"
   user_data = base64encode(templatefile("${path.module}/scripts/frontend.sh", {
-  db_endpoint = aws_db_instance.ecomm-db-inst.endpoint
-}))
+    db_endpoint = aws_db_instance.ecomm-db-inst.address,
+    # s3_bucket   = aws_s3_bucket.ecomm-bucket.id
+  }))
 
 
   # user_data     = base64encode(file("./scripts/frontend.sh"))
@@ -51,15 +52,4 @@ resource "aws_launch_template" "ecomm-launch-temp-be" {
   tags = {
     Name = "ecomm-launch-temp-be"
   }
-}
-
-data "aws_ami" "amazon-linux-2023" {
-  most_recent = true
-  owners      = ["amazon"]
-
-  filter {
-    name   = "name"
-    values = ["al2023-ami-2023.9*-x86_64"]
-  }
-
 }
