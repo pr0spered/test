@@ -4,10 +4,10 @@
 class DBController
 {
     // Database Connection Properties
-    protected $host = 'localhost';
-    protected $user = 'root';
-    protected $password = '';
-    protected $database = "shopee";
+    protected $host = '<host>';
+    protected $user = 'admin';
+    protected $password = '12345678';
+    protected $database = 'ecomm-data';
 
     // connection property
     public $con = null;
