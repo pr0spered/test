@@ -29,7 +29,7 @@ chmod -R 755 /var/www/html
 # cd /var/www/html/database
 
 
-sed -i "s|<host>|${db_endpoint}|" /var/www/html/html/database/DBController.php
+sed -i "s|<host>|${db_endpoint}|" /var/www/html/database/DBController.php
 
 
 
