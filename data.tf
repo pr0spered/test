@@ -12,3 +12,8 @@ data "aws_ami" "amazon-linux-2023" {
   }
 
 }
+
+data "aws_route53_zone" "ecomm-zone" {
+  name         = "strawb3rry.club"
+  private_zone = false
+}

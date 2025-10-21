@@ -1,6 +1,6 @@
 
 <!-- Blogs -->
-<section id="blogs">
+<!-- <section id="blogs">
     <div class="container py-4">
         <h4 class="font-rubik font-size-20">Latest Blogs</h4>
         <hr>
@@ -32,5 +32,5 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <!-- !Blogs -->
