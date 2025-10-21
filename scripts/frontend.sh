@@ -2,7 +2,7 @@
 # set -e
 # exec > >(tee /var/log/user-data.log|logger -t user-data ) 2>&1
 dnf update -y
-dnf install -y httpd awscli php php-mysqlnd php-pdo
+dnf install -y httpd awscli php php-mysqlnd php-pdo php-fpm php-cli php-common php-mbstring php-xml php-json php-opcache php-soap php-intl php-zip
 
 sleep 20
 
