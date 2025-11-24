@@ -34,3 +34,5 @@ The following features are implemented
 - MySQL database for storing users, movies, transactions, tickets, shows, screens, theatres, locked seats and ratings.
 - Proper relation between tables ensure consistency and accuracy of data.
 - Implements seat locking mechanism with an event to release locked seats.
+
+![Screenshot description](https://github.com/pr0spered/test/blob/main/screenshots/great_adventure.jpg)
