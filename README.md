@@ -35,4 +35,4 @@ The following features are implemented
 - Proper relation between tables ensure consistency and accuracy of data.
 - Implements seat locking mechanism with an event to release locked seats.
 
-![Screenshot description](https://github.com/pr0spered/test/blob/main/screenshots/great_adventure.jpg)
+![Screenshot description](https://github.com/pr0spered/test/raw/main/screenshots/great_adventure.jpg)
