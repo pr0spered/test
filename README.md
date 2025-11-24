@@ -42,13 +42,17 @@ Homepage:
 ![Home](https://github.com/pr0spered/test/raw/main/screenshots/home.png)
 
 Movie Page:
+
 ![Movie](https://github.com/pr0spered/test/raw/main/screenshots/movie.png)
 
 Movie Screen:
+
 ![Screen](https://github.com/pr0spered/test/raw/main/screenshots/screen.png)
 
 Bookings:
+
 ![Bookings](https://github.com/pr0spered/test/raw/main/screenshots/tickets.png)
 
 Payment Page:
+
 ![Payment](https://github.com/pr0spered/test/raw/main/screenshots/payment.png)
