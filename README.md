@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a full-stack ticket booking application built using HTML, CSS, PHP, JavaScript and MySQL. 
+    This is a full-stack ticket booking application built using HTML, CSS, PHP, JavaScript and MySQL. 
 It allows users to search for movies, select and review seats, book tickets, simulate payments, rate movies, view their booking history, etc. The project is suitable for web-based applications with dynamic user interactions.
 
 ---
@@ -41,21 +41,17 @@ Homepage:
 
 ![Home](https://github.com/pr0spered/test/raw/main/screenshots/home.png)
 
-
 Movie Page:
 
 ![Movie](https://github.com/pr0spered/test/raw/main/screenshots/movie.png)
-
 
 Movie Screen:
 
 ![Screen](https://github.com/pr0spered/test/raw/main/screenshots/screen.png)
 
-
 Bookings:
 
 ![Bookings](https://github.com/pr0spered/test/raw/main/screenshots/tickets.png)
-
 
 Payment Page:
 
