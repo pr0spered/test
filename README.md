@@ -35,4 +35,6 @@ The following features are implemented
 - Proper relation between tables ensure consistency and accuracy of data.
 - Implements seat locking mechanism with an event to release locked seats.
 
+Here’s what the movie selection screen looks like:
 ![Movie Poster](https://github.com/pr0spered/test/raw/main/screenshots/great_adventure.jpg)
+Here’s what the movie selection screen looks like:
