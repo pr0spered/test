@@ -1,4 +1,4 @@
-# FullStack-php
+# FullStack-PHP
 
 ## Overview
 
