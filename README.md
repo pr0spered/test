@@ -1,12 +1,14 @@
 # FullStack-PHP
 
 ## Overview
+
 This is a full-stack ticket booking application built using HTML, CSS, PHP, JavaScript and MySQL. 
 It allows users to search for movies, select and review seats, book tickets, simulate payments, rate movies, view their booking history, etc. The project is suitable for web-based applications with dynamic user interactions.
 
 ---
 
 ## Features
+
 The following features are implemented
 
 - **User Management:** Register new users, login and logout.
@@ -17,6 +19,7 @@ The following features are implemented
 - **Movie Rating:** Rate movies and view overall movie ratings.
 
 ## Architecture
+
 ### 1. **Frontend**
 - Publicly accessible frontend interface built with HTML, CSS and JavaScript.
 - Users interact with movie listings, seat selection, movie rating, booking, payment, etc.
