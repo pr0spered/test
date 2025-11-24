@@ -35,7 +35,10 @@ The following features are implemented
 - Proper relation between tables ensure consistency and accuracy of data.
 - Implements seat locking mechanism with an event to release locked seats.
 
+## Screenshots
+
 Homepage:
+
 ![Home](https://github.com/pr0spered/test/raw/main/screenshots/home.png)
 
 Movie Page:
