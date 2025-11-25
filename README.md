@@ -36,7 +36,7 @@ The following features are implemented
 - Implements seat locking mechanism with an event to release locked seats.
 
 ## Testing
-`test_data.sql` is present which can be used to populate the database with sample data. This file contains example records that demonstrate how the application works. All test users included in test_data.sql use the password `test@123`.
+`test_data.sql` is present which can be used to populate the database with sample data. This file contains example records that demonstrate how the application works. All test users included in test_data.sql use the password test@123.
 
 ## Screenshots
 
